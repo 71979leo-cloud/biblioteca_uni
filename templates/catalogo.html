@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="content-panel">
+  <h2>Materiales disponibles</h2>
+  <ul class="list-group custom-list">
+    {% for categoria in categorias %}
+    <li class="list-group-item custom-list-item">
+      <strong>{{ categoria.nombre }}</strong>
+      <p class="mb-0">{{ categoria.descripcion }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

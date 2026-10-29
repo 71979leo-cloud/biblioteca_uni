@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="content-panel">
+  <h2>Servicios de la biblioteca</h2>
+  <ul class="list-group custom-list">
+    {% for servicio in servicios %}
+    <li class="list-group-item custom-list-item">
+      <strong>{{ servicio.nombre }}</strong>
+      <p class="mb-0">{{ servicio.descripcion }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

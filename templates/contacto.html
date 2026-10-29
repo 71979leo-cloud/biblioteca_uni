@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="content-panel contact-panel">
+  <h2>Medios de contacto</h2>
+  <dl class="row contact-list">
+    <dt class="col-sm-3">Dirección</dt>
+    <dd class="col-sm-9">{{ contacto.direccion }}</dd>
+
+    <dt class="col-sm-3">Correo electrónico</dt>
+    <dd class="col-sm-9"><a href="mailto:{{ contacto.correo }}">{{ contacto.correo }}</a></dd>
+
+    <dt class="col-sm-3">Horario de atención</dt>
+    <dd class="col-sm-9">{{ contacto.horario }}</dd>
+  </dl>
+</section>
+{% endblock %}

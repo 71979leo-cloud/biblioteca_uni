@@ -1,0 +1,195 @@
+:root {
+  --bg-light: #f4f7fb;
+  --bg-warm: #fffaf2;
+  --primary: #1f4d8c;
+  --primary-dark: #163861;
+  --secondary: #f5b640;
+  --accent: #6cb4a8;
+  --text: #1c2a39;
+  --muted: #5f6f82;
+  --card: rgba(255, 255, 255, 0.9);
+  --border: rgba(31, 77, 140, 0.12);
+  --shadow: 0 18px 35px rgba(28, 42, 57, 0.12);
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(108, 180, 168, 0.18), transparent 30%),
+    linear-gradient(135deg, var(--bg-light), var(--bg-warm));
+}
+
+.site-navbar {
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary), #2d6bc2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 24px rgba(22, 56, 97, 0.2);
+  padding: 0.9rem 0;
+}
+
+.brand-name {
+  letter-spacing: 0.03em;
+  font-size: 1.25rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  transition: all 0.25s ease;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.page-shell {
+  padding-top: 2rem;
+}
+
+.page-header {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(31, 77, 140, 0.08);
+  border-radius: 24px;
+  padding: 2rem 2rem 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 0.45rem 0.8rem;
+  margin-bottom: 0.9rem;
+  border-radius: 999px;
+  background: rgba(245, 182, 64, 0.18);
+  color: var(--primary-dark);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.page-header h1 {
+  font-weight: 800;
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-bottom: 0.6rem;
+  color: var(--primary-dark);
+}
+
+.page-header .lead {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.content-panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.content-panel h2 {
+  color: var(--primary-dark);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.content-panel p {
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.info-badge-wrap {
+  margin: 1.2rem 0 0.8rem;
+}
+
+.info-badge {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(31, 77, 140, 0.12), rgba(108, 180, 168, 0.14));
+  border: 1px solid rgba(31, 77, 140, 0.08);
+  color: var(--primary-dark);
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+  font-weight: 700;
+}
+
+.custom-list {
+  border: none;
+  gap: 1rem;
+  display: grid;
+}
+
+.custom-list-item {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(244,247,251,0.92));
+  padding: 1.2rem 1.1rem;
+  box-shadow: 0 8px 18px rgba(28, 42, 57, 0.04);
+}
+
+.custom-list-item strong {
+  display: block;
+  color: var(--primary-dark);
+  font-size: 1.08rem;
+  margin-bottom: 0.4rem;
+}
+
+.custom-list-item p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.contact-panel {
+  background: linear-gradient(160deg, rgba(255,255,255,0.95), rgba(233, 242, 255, 0.88));
+}
+
+.contact-list dt {
+  color: var(--primary-dark);
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.contact-list dd {
+  color: var(--text);
+  margin-bottom: 0.9rem;
+}
+
+.contact-list a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-list a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .site-navbar {
+    padding: 0.75rem 0;
+  }
+
+  .navbar-brand {
+    width: 100%;
+    margin-bottom: 0.6rem;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .page-header,
+  .content-panel {
+    padding: 1.25rem;
+  }
+}
